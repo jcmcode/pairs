@@ -8,3 +8,4 @@ seaborn
 plotly
 statsmodels
 pandas-ta-classic
+pykalman
