@@ -1,0 +1,49 @@
+PAIR VALIDATION OUTPUT GUIDE 
+
+  -------------------------------------------------
+  1) CLUSTER PERSISTENCE (0 to 1)
+  -------------------------------------------------
+  Represents how long the two stocks have
+  stayed in the same cluster recently.
+
+  0.8 – 1.0 = STRONG temporary relationship (what we want)
+  0.6 – 0.8 = OK 
+  < 0.6 = WEAK relationship
+
+  The higher the value, the better.
+  -------------------------------------------------
+  2) LAG-1 AUTOCORRELATION
+  -------------------------------------------------
+  Represents if the spread keeps moving in the same direction.
+
+  Negative = STRONG mean reversion (what we want)
+  -0.2 to 0.2 = neutral/not trending
+  0.2 to 0.6 = OK 
+  > 0.7 =  trending, NOT reverting (do NOT want)
+
+  We want either a low value, or a negative which is even better.
+  -------------------------------------------------
+  3) AR(1) PHI (Mean-Reversion Strength)
+  -------------------------------------------------
+  Represents how related the spread is to its previous value.
+
+  < 0 = VERY STRONG mean reversion
+  0.0 – 0.4 = STRONG mean reversion 
+  0.4 – 0.6 = GOOD 
+  0.6 – 0.75 = WEAK 
+  > 0.8 = BAD (trend-like behavior) 
+  ≈ 1.0 = NO mean reversion
+
+  We want LOWER phi values.
+  -------------------------------------------------
+  4) BOUNCE RATE (0 to 1)
+  -------------------------------------------------
+  Represents how often the spread pulls back after becoming extreme.
+
+  0.6 – 1.0 = VERY GOOD 
+  0.4 – 0.6 = GOOD 
+  0.2 – 0.4 = WEAK
+  < 0.2 = BAD
+
+  We want high bounce rates.
+
